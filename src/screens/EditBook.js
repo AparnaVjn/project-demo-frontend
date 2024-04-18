@@ -11,7 +11,7 @@ function EditBook() {
   const [book, setBook] = useState({});
   useEffect(() => {
   if (id) {
-    Axios.get(`http://localhost:5000/editBook/${id}`)
+    Axios.get(`https://backendserver.render.com/editBook/${id}`)
   .then(response => {
     setBook(response.data);
         setName(response.data.bookName);

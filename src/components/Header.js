@@ -24,7 +24,7 @@ function Header() {
         throw new Error('Token not found');
       }
 
-      const response = await axios.get('http://localhost:5000/adminName', {
+      const response = await axios.get('https://backendserver.render.com/adminName', {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -42,7 +42,7 @@ function Header() {
 
   const handleLogout = async () => {
     try {
-      await axios.post('http://localhost:5000/logout');
+      await axios.post('https://backendserver.render.com/logout');
       localStorage.removeItem('adminName'); // Remove admin name from local storage on logout
       window.location.href = '/';
     } catch (error) {

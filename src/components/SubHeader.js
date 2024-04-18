@@ -10,7 +10,7 @@ function SubHeader({ onBookSelect, setSearchResult }) {
 
   const handleSearch = async () => {
     try {
-      const response = await Axios.get(`http://localhost:5000/searchBooks?query=${searchInput}`);
+      const response = await Axios.get(`https://backendserver.render.com/searchBooks?query=${searchInput}`);
       setSearchResults(response.data);
     } catch (error) {
       console.error('Error searching books:', error);
@@ -19,7 +19,7 @@ function SubHeader({ onBookSelect, setSearchResult }) {
   const handleInputChange = async (e) => {
     setSearchInput(e.target.value);
     try {
-      const response = await Axios.get(`http://localhost:5000/searchBooks?query=${e.target.value}`);
+      const response = await Axios.get(`https://backendserver.render.com/searchBooks?query=${e.target.value}`);
       setSearchResult(response.data);
     } catch (error) {
       console.error('Error searching books:', error);
