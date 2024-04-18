@@ -13,7 +13,7 @@ function BookDetails() {
 
   useEffect(() => {
   if (id) {
-   Axios.get(`https://backendserver.render.com/bookDetails/${id}`)
+   Axios.get(`https://libraryserver-xey1.onrender.com/bookDetails/${id}`)
   .then(response => {
     console.log(response);
     setBook(response.data);
@@ -28,7 +28,7 @@ function BookDetails() {
 const navigate = useNavigate();
 function deleteBook(){
   alert("Delete the selected book?");
-  Axios.post(`https://backendserver.render.com/deleteBook/${id}`);
+  Axios.post(`https://libraryserver-xey1.onrender.com/deleteBook/${id}`);
   alert("Successfully deleted!");
   navigate('/adminHome');
 }

@@ -14,7 +14,7 @@ function BookIssueClone() {
 
   useEffect(() => {
     if (admissionNo) {
-      axios.get(`https://backendserver.render.com/bookIssue/${admissionNo}`)
+      axios.get(`https://libraryserver-xey1.onrender.com/bookIssue/${admissionNo}`)
         .then(response => {
           setStudent(response.data)
         })

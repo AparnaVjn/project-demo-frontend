@@ -24,7 +24,7 @@ function Header() {
         throw new Error('Token not found');
       }
 
-      const response = await axios.get('https://backendserver.render.com/adminName', {
+      const response = await axios.get('https://libraryserver-xey1.onrender.com/adminName', {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -42,7 +42,7 @@ function Header() {
 
   const handleLogout = async () => {
     try {
-      await axios.post('https://backendserver.render.com/logout');
+      await axios.post('https://libraryserver-xey1.onrender.com/logout');
       localStorage.removeItem('adminName'); // Remove admin name from local storage on logout
       window.location.href = '/';
     } catch (error) {

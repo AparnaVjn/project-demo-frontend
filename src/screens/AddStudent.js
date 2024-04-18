@@ -20,7 +20,7 @@ function AddStudent() {
 
   const addStudent = async (e) => {
     e.preventDefault();
-    await Axios.post('https://backendserver.render.com/addStudent', {
+    await Axios.post('https://libraryserver-xey1.onrender.com/addStudent', {
       studentName,
       className,
       division,

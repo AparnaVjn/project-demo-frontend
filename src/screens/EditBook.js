@@ -11,7 +11,7 @@ function EditBook() {
   const [book, setBook] = useState({});
   useEffect(() => {
   if (id) {
-    Axios.get(`https://backendserver.render.com/editBook/${id}`)
+    Axios.get(`https://libraryserver-xey1.onrender.com/editBook/${id}`)
   .then(response => {
     setBook(response.data);
         setName(response.data.bookName);
@@ -32,7 +32,7 @@ const navigate = useNavigate();
 
 const addBook = async (e) => {
   e.preventDefault();
-    await Axios.post(`http://localhost:5000/editBook/${id}`, {
+    await Axios.post(`https://libraryserver-xey1.onrender.com/editBook/${id}`, {
         bookName,
         author,
         language,

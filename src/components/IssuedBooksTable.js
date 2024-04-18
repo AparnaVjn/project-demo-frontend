@@ -9,7 +9,7 @@ function IssuedBooksTable({ student }) {
 
   const returnClick = async (serialNo) => {
     try {
-      const response = await Axios.get(`https://backendserver.render.com/returnBook/${serialNo}/${admissionNo}`);
+      const response = await Axios.get(`https://libraryserver-xey1.onrender.com/returnBook/${serialNo}/${admissionNo}`);
       if (response.data === null) {
         alert("Enter valid Serial No");
         // Clear input field
